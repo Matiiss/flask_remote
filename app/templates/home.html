@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Home</title>
+
+    <style>
+        p {
+            font-size: 2.5em;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+<!--row 0-->
+    <div class="d-flex bg-success justify-content-center flex-column">
+        <div class="d-flex justify-content-center">
+            <img src="{{ url_for('static', filename='big_up_arrow.png') }}" alt="big up arrow"
+                 onclick="sendAction('{{ url_for('actions', action='mouse_u', args='100, ') }}')">
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="{{ url_for('static', filename='small_up_arrow.png') }}" alt="small up arrow"
+                 onclick="sendAction('{{ url_for('actions', action='mouse_u', args='10, ') }}')">
+        </div>
+    </div>
+
+<!--row 1-->
+    <div class="d-flex bg-primary justify-content-between align-items-center">
+        <div class="d-flex flex-row justify-content-center">
+            <div>
+                <img src="{{ url_for('static', filename='big_left_arrow.png') }}" alt="big left arrow"
+                     onclick="sendAction('{{ url_for('actions', action='mouse_l', args='100, ') }}')">
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='small_left_arrow.png') }}" alt="small left arrow"
+                     onclick="sendAction('{{ url_for('actions', action='mouse_l', args='10, ') }}')">
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <div class="d-flex flex-row">
+                <img src="{{ url_for('static', filename='mouse_left_btn.png') }}" alt="press left btn"
+                     onclick="sendAction('{{ url_for('actions', action='mouse_press', args='left, ') }}')">
+                <img src="{{ url_for('static', filename='mouse_right_btn.png') }}" alt="press right btn"
+                     onclick="sendAction('{{ url_for('actions', action='mouse_press', args='right, ') }}')">
+            </div>
+        </div>
+
+        <div class="d-flex flex-row justify-content-center">
+            <div>
+                <img src="{{ url_for('static', filename='small_right_arrow.png') }}" alt="small right arrow"
+                     onclick="sendAction('{{ url_for('actions', action='mouse_r', args='10, ') }}')">
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='big_right_arrow.png') }}" alt="big right arrow"
+                     onclick="sendAction('{{ url_for('actions', action='mouse_r', args='100, ') }}')">
+            </div>
+        </div>
+    </div>
+
+<!--row 2-->
+    <div class="d-flex bg-warning justify-content-center flex-column">
+        <div class="d-flex justify-content-center">
+            <img src="{{ url_for('static', filename='small_down_arrow.png') }}" alt="small down arrow"
+                 onclick="sendAction('{{ url_for('actions', action='mouse_d', args='10, ') }}')">
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="{{ url_for('static', filename='big_down_arrow.png') }}" alt="big down arrow"
+                 onclick="sendAction('{{ url_for('actions', action='mouse_d', args='100, ') }}')">
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-content-center flex-column">
+        <div class="d-flex justify-content-center">
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='q, ') }}')">q</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='w, ') }}')">w</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='e, ') }}')">e</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='r, ') }}')">r</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='t, ') }}')">t</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='y, ') }}')">y</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='u, ') }}')">u</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='i, ') }}')">i</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='o, ') }}')">o</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='p, ') }}')">p</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='a, ') }}')">a</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='s, ') }}')">s</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='d, ') }}')">d</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='f, ') }}')">f</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='g, ') }}')">g</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='h, ') }}')">h</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='j, ') }}')">j</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='k, ') }}')">k</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='l, ') }}')">l</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='z, ') }}')">z</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='x, ') }}')">x</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='c, ') }}')">c</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='v, ') }}')">v</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='b, ') }}')">b</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='n, ') }}')">n</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='write', args='m, ') }}')">m</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='press', args='backspace, ') }}')">Bckspc</p>
+            <p class="border border-dark m-1 p-1"
+               onclick="sendAction('{{ url_for('actions', action='press', args='enter, ') }}')">Enter</p>
+        </div>
+    </div>
+
+    <script>
+        function sendAction(url){
+            var http = new XMLHttpRequest()
+            http.open("GET", url)
+            http.send()
+        }
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
